@@ -9,7 +9,6 @@ class ExampleController < ApplicationController
   end
 
   def hello_world
-    puts "Hit test connection"
   end
 
   def hello
