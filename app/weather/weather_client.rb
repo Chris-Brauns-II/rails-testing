@@ -12,6 +12,9 @@ class WeatherClient
   def fetch_weather
     site = "#{@weather_service_url}" 
     url = "/#{@weather_service_api_key}/#{@@lattitude}/#{@@longitude}"
-    JSON.parse Net::HTTP.get(URI("#{site}#{url}"))
+    uri = URI("#{site}#{url}")
+    # binding.pry
+    result = Net::HTTP.get(uri)
+    JSON.parse result 
   end
 end

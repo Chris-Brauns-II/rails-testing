@@ -1,0 +1,24 @@
+{
+  "consumer": {
+    "name": "Everyone"
+  },
+  "provider": {
+    "name": "Example Service"
+  },
+  "interactions": [
+    {
+      "description": "a request for someone named Peter Pan",
+      "request": {
+        "method": "get",
+        "path": "/hello/Pan",
+        "headers": {}
+      },
+      "response": {
+        "status": 200,
+        "headers": {},
+        "body":
+         "hello Peter Pan"
+      }
+    }
+  ]
+}
