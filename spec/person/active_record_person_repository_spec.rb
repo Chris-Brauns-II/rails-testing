@@ -9,12 +9,12 @@ RSpec.describe ActiveRecordPersonRepository do
         last_name = "Pan"
         person = Person.create(:first_name => "Peter", :last_name => last_name)
 
-        result = subject.find_by_last_name(last_name).first
+        result = subject.find_by_last_name(last_name)
         expect(result).to eq person
       end
 
       it "Gives empty when correct" do
-        result = subject.find_by_last_name("Pan").first
+        result = subject.find_by_last_name("Pan")
         expect(result).to be nil
       end
     end
